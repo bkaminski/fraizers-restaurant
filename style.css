@@ -1,0 +1,681 @@
+/*
+Theme Name: Fraizer's Restaurant
+Theme URI: http://fraizersrestaurant.com
+Author: Ben Kaminski (Benjamin Kaminski Consulting)
+Author URI: https://benkaminski.com
+Description: Custom WordPress theme developed exclusively for Fraizer's Restaurant and Bar in Dover Delaware.
+Version: 1.0.1
+Tags: black, gold, purple, full-bleed, responsive, mobile-first, carousel, theme customizer functions, restaurant, Delaware
+Text Domain: fraizers_restaurant
+*/
+html, body{
+margin: 0px;
+padding: 0px
+}
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 18px
+}
+a:link {
+border:none;
+outline:none
+}
+a {
+word-wrap: break-word
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Lato' , sans-serif
+}
+h1 {
+font-size: 52px
+}
+h2 {
+font-size: 46px
+}
+h3 {
+font-size: 38px
+}
+h4 {
+font-size: 32px
+}
+h5 {
+font-size: 28px
+}
+h6 {
+font-size: 24px
+}
+a:link {
+word-wrap: break-word
+}
+/* helpers */
+.noPaddingLR {
+padding-left: 0px;
+padding-right: 0px;
+}
+.white {
+color: white
+}
+/**/
+/* Wordpress Specific Image Classes */
+img.alignright {
+float:right; 
+margin:0 0 1em 1em !important
+}
+img.alignleft {
+float:left; 
+margin:0 1em 1em 0 !important
+}
+img.aligncenter {
+display: block; 
+margin-left: auto !important; 
+margin-right: auto !important
+}
+a img.alignright {
+float:right; 
+margin:0 0 1em 1em !important
+}
+a img.alignleft {
+float:left; 
+margin:0 1em 1em 0 !important
+}
+a img.aligncenter {
+display: block; 
+margin-left: auto; 
+margin-right: auto !important
+}
+.wp-caption {
+max-width: 96% !important;
+background-color: #f3f3f3;
+font-size: 12px;
+padding: 5px;
+margin-bottom: 15px !important;
+text-align: center
+}
+.wp-caption.alignnone {
+margin: 5px 20px 20px 0
+}
+.wp-caption.alignleft {
+margin: 5px 20px 20px 0
+}
+.wp-caption.alignright {
+margin: 5px 0 20px 20px
+}
+.aligncenter {
+text-align: center;
+margin: 0 auto
+}
+.alignnone {
+margin: 5px 20px 20px 0
+}
+.aligncenter,div.aligncenter {
+display: block;
+margin: 5px auto 5px auto
+}
+.alignright {
+float:right;
+margin: 5px 0 20px 20px
+}
+.alignleft {
+float: left;
+margin: 5px 20px 20px 0
+}
+.aligncenter {
+display: block;
+margin: 5px auto 5px auto
+}
+/* end WP image classes */
+
+/*======================================= EVENT CALENDAR ================================*/
+.eme-location-map {
+width: 100% !important;
+height: 400px !important
+}
+.eme_events_list {
+font-size: 18px
+}
+.eme-calendar-table {
+font-size: 12px;
+width:100%;
+height:300px;
+background-color:#718dc7;
+color:#FFF
+}
+.eme-location-balloon {
+font-size: 95%;
+line-height: 100%;
+margin-bottom: 1em;
+color: black
+}
+.eme-location-baloon a {
+display: none !important
+}
+td.eventful-today{
+font-weight: bold;
+color: #222 !important;
+background: #718dc7 !important
+}
+td.eventful-today a {
+color: #222 !important;
+}
+.month_name {
+color:#FFF;
+font-weight:100;
+font-size:18px;
+text-transform:uppercase;
+line-height: 2
+}
+.eventful {
+background: #5cb85c !important;
+transition: 0.4s ease-in-out
+}
+.eventful:hover {
+background: #4cae4c !important
+}
+.eme-calendar-table thead th {
+padding: 44px 0;
+color: #666;
+text-transform: uppercase;
+text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+border-bottom: 1px solid #bbbbbb;
+background: #f7f7f7
+}
+.eme-calendar-table tbody td {
+color: #666;
+padding: 8px;
+text-align: center;
+border: 1px solid;
+border-color: #fff #bbbbbb #bbbbbb #fff;
+background: #ededed;
+background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#dedede));
+background: -moz-linear-gradient(top,  #ededed,  #dedede)
+}
+table.eme-calendar-table td {
+padding:2px !important;
+padding-top:5px !important
+}
+table.eme-calendar-table td.eventful a {
+color:#fff !important;
+font-weight:bold;
+transition: 0.4s ease-in-out
+}
+table.eme-calendar-table td.eventful a:hover {
+color:#000 !important;
+transition: 0.4s ease-in-out;
+text-decoration: none !important
+}
+.prev-month {
+color:#FFF !important;
+font-size:12px
+}
+.next-month {
+color:#FFF !important;
+font-size:12px
+}
+.left-sidebar-interior tr td .next-month {
+color:#FFF !important
+}
+.left-sidebar-interior tr td .prev-month{
+color:#FFF !important
+}
+.eventTitle {
+font-size: 28px
+}
+.eventTitle a {
+transition: 0.4s ease-in-out
+}
+.eventTitle a:hover {
+color: #ec971f;
+transition: 0.4s ease-in-out
+}
+.eme_events_list { 
+list-style-type: none !important
+}
+/* ======================================= END OF EVENT CALENDAR ================================ */
+
+/* ===================================== Bootstrap Customization =================================== */
+
+/* Ken Burns Transition effect for Bootstrap Carousel */
+/* transition */
+.carousel .item img {
+-webkit-transition: all 6s;
+-moz-transition: all 6s;
+-o-transition: all 6s;
+transition: all 6s
+}
+/* start status */
+.carousel .item img,
+.carousel .item.active.inactiveUntilOnLoad img {
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1)
+}
+/* end status */
+.carousel .item.active img {
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-o-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1)
+}
+/* End Ken Burns */
+
+.btn {
+border-radius: 0px
+}
+.navbar {
+height: 95px;
+border-radius: 0px;
+transition: 0.4s ease-in-out
+}
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover {
+color: #fff !important;
+background-color: #222;
+opacity: 0.9
+}
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover {
+color: #fff;
+background-color: #cfa670;
+border-radius: 0px
+}
+.nav>li>a:focus, 
+.nav>li>a:hover {
+text-decoration: none;
+background-color: #222;
+color: white;
+border-radius: 0px
+}
+/* ===================================== End Bootstrap Customization =================================== */
+
+/* ====================================== CUSTOM STYLES ===================================== */
+#preHeader {
+height: 30px;
+color: white;
+font-size: 16px;
+width: 100%;
+background: #cfa670 !important;
+top: 0;
+padding-top: 3px
+}
+#preHeader a {
+color: white
+}
+#preHeader a:hover .fa-fb-blue {
+color: #3b5998;
+transition: 0.4s ease-in-out
+}
+#fraizersFooter {
+min-height: 300px;
+width: 100%;
+border-top: 6px solid #718dc7;
+background: black;
+padding: 10px;
+opacity: 0.9;
+overflow: hidden
+}
+.nav-container {
+padding-top: 20px;
+transition: 0.4s ease-in-out
+}
+#fraizersCarousel {
+margin-top: -20px;
+}
+.carousel-helper {
+padding-top: 115px
+}
+#mainLogo {
+margin-top: -15px;
+transition: 0.4s ease-in-out;
+width: 150px;
+height: 56px
+}
+#upcomingEvents {
+min-height: 50px;
+width: 100%
+}
+#mainBody {
+width: 100%;
+min-height: 1200px;
+margin-top: -20px;
+background-image: url('img/paper_bg.png');
+background-repeat: repeat;
+}
+#subBody {
+width: 100%;
+min-height: 800px;
+margin-top: -20px;
+background-image: url('img/paper_bg.png');
+background-repeat: repeat;
+padding-top: 130px;
+padding-bottom: 50px
+}
+.navbar.mini-nav {
+height: 50px;
+transition: 0.4s ease-in-out
+}
+#home { 
+height: 600px;  
+margin: 0 auto; 
+width: 100%; 
+position: relative; 
+padding: 200px 0
+}
+.parallax-heading {
+color: white;
+font-size: 48px;
+text-shadow: 2px 2px 2px #000000
+}
+.textarea-title {
+display: block
+}
+.textarea-widget {
+text-shadow: 2px 2px 2px #000000
+}
+#home {
+border-top: 6px solid #718dc7;
+border-bottom: 6px solid #718dc7
+}
+.subFooterMiddle a {
+color: white;
+transition: 0.4s ease-in-out
+}
+.subFooterMiddle a:hover .fa-fb-blue {
+color: #3b5998;
+transition: 0.4s ease-in-out
+}
+.navbar-fixed-top + .offset-div {
+padding-top: 110px
+}
+.menu-sidebar-outer {
+position: relative
+}
+/* ====================================== MEDIA QUERIES ====================================== */
+@media only screen and (min-width : 320px) {
+.fraizers-navbar {
+top: 0px
+}
+.navbar-toggle {
+padding: 6px 7px;
+margin-top: 8px;
+margin-right: 15px;
+margin-bottom: 8px;
+background-color: transparent;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 0px;
+}
+.navbar-static-top .collapsing, .in {
+background-color: #cfa670
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+background-color: #222;
+}
+.navbar-inverse .navbar-toggle {
+border-color: #333;
+}
+.navbar-inverse .navbar-toggle {
+background-color: #cfa670;
+padding-top: 3px
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+background-color: #cfa670
+}
+.slider-title {
+font-size: 24px;
+text-shadow: 2px 2px 2px #000000;
+}
+.carousel-caption {
+padding-bottom: 0px;
+}
+.slider-desc {
+font-size: 26px;
+text-shadow: 2px 2px 2px #000000
+}
+.collapsing {
+background-color: #cfa670
+}
+.page-id-6 a {
+color: #222
+}
+.page-id-6 a .fa-facebook-official {
+color: white;
+transition: 0.4s ease-in-out
+}
+.page-id-6 a:hover .fa-facebook-official {
+color: #23527c;
+transition: 0.4s ease-in-out
+}
+#apps, #wings, #salad, #sandwiches, #steaks, #wraps, #burgers, #entrees, #drinks {
+margin-top: -200px;        /* Size of fixed header */
+padding-bottom: 240px; 
+display: block
+}
+#subFooter {
+width: 100%;
+background: #cfa670
+}
+.subFooterLeft {
+margin-top: 0px;
+}
+.subFooterRight {
+margin-top: 0px;
+}
+.collapsing ul li a, .in ul li a {
+color: #333!important
+}
+.collapsing ul li a:hover, .in ul li a:hover {
+color: #f1f1f1!important
+}
+.collapsing ul li a:hover, .in ul li a:focus {
+color: #f1f1f1!important
+}
+.collapsing ul li a:hover, .in ul li .current-menu-item a:visited {
+color: #f1f1f1!important
+}}
+@media only screen and (min-width : 480px) {
+.fraizers-navbar {
+top: 0px
+}
+.slider-title {
+font-size: 24px
+}}
+@media only screen and (min-width : 768px) {
+.fraizers-navbar {
+top: 30px
+}
+.carouselImage {
+min-height: auto !important
+}
+.menu-sidebar {
+position: fixed;
+}
+.navbar-static-top .collapsing, .in {
+background-color: transparent
+}
+.slider-title {
+font-size: 46px
+}
+#subFooter {
+min-height: 100px;
+width: 100%;
+background: #cfa670;
+text-align: left
+}
+.subFooterLeft {
+padding-top: 35px
+}
+.subFooterMiddle {
+margin-top: -40px
+}
+.subFooterRight {
+margin-top: -45px
+}
+.navbar-right {
+float: right!important;
+margin-right: -30px
+}
+.embed-responsive-4by3 {
+padding-bottom: 35%
+}
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 10px;
+vertical-align: middle;
+border-top: 10px dashed;
+border-top: 8px solid\9;
+border-right: 5px solid transparent;
+border-left: 5px solid transparent
+}
+.menu-item {
+font-size: 18px;
+font-family: 'Lato' , sans-serif
+}}
+@media only screen and (min-width : 992px) {
+.fraizers-navbar {
+top: 30px
+}
+.embed-responsive-4by3 {
+padding-bottom: 75%
+}
+.slider-title {
+font-size: 46px
+}
+.btn-right {
+margin-left: 65%
+}
+#menuArea {
+min-height: 530px;
+width: 480px;
+margin-left: -80px;
+background: white;
+box-shadow: 2px 2px 10px gray;
+margin-top: 50px;
+padding: 10px 20px;
+box-shadow: 0 0 50px rgba(0,0,0,0.8)
+}
+#functionArea {
+min-height: 440px;
+width: 480px;
+margin-left: -80px;
+background: white;
+box-shadow: 2px 2px 10px gray;
+margin-top: 70px;
+padding: 10px 20px;
+box-shadow: 0 0 50px rgba(0,0,0,0.8)
+}
+.footer-boxes {
+margin-top: 0px;
+margin-bottom: 10px
+}
+#subFooter {
+min-height: 105px;
+width: 100%;
+background: #cfa670;
+text-align: left
+}
+.subFooterLeft {
+padding-top: 40px
+}
+.subFooterMiddle {
+padding-top: 35px;
+margin-top: 0px
+}
+.subFooterRight {
+margin-top: 35px
+}
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 10px;
+vertical-align: middle;
+border-top: 10px dashed;
+border-top: 8px solid\9;
+border-right: 5px solid transparent;
+border-left: 5px solid transparent
+}
+.menu-item {
+font-size: 24px;
+font-family: 'Lato' , sans-serif
+}}
+@media only screen and (min-width : 1200px) {
+.fraizers-navbar {
+top: 30px
+}
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 10px;
+vertical-align: middle;
+border-top: 10px dashed;
+border-top: 8px solid\9;
+border-right: 5px solid transparent;
+border-left: 5px solid transparent
+}
+.map-img {
+max-height: 300px;
+}
+.embed-responsive-4by3 {
+padding-bottom: 75%
+}
+.slider-title {
+font-size: 46px
+}
+.btn-right {
+margin-left: 70%
+}
+#menuArea .btn-right {
+margin-left: 70%
+}
+#subFooter {
+min-height: 75px;
+width: 100%;
+background: #cfa670;
+text-align: left
+}
+.subFooterLeft {
+padding-top: 25px
+}
+.subFooterMiddle {
+padding-top: 20px
+}
+.subFooterRight {
+margin-top: 18px
+}
+.menu-item {
+font-size: 24px;
+font-family: 'Lato' , sans-serif
+}
+.footer-boxes {
+margin-top: 0px;
+margin-bottom: 10px
+}
+#functionArea {
+min-height: 100px;
+width: 580px;
+margin-left: -80px;
+background: white;
+box-shadow: 2px 2px 10px gray;
+margin-top: 130px;
+padding: 10px 15px 20px 15px;
+box-shadow: 0 0 50px rgba(0,0,0,0.8)
+}
+#menuArea {
+min-height: 100px;
+width: 580px;
+margin-left: -80px;
+background: white;
+box-shadow: 2px 2px 10px gray;
+margin-top: 100px;
+padding: 10px 15px 20px 25px;
+box-shadow: 0 0 50px rgba(0,0,0,0.8)
+}}
+/* ====================================== END CUSTOM STYLES AND MEDIA QUERIES  ===================================== */
