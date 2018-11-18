@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php include 'inc/fraizers_carousel.php' ?>
 <div id="upcomingEvents">
-	<div class="alert alert-info text-center"><?php dynamic_sidebar( 'fraizers_home_event_calendar' ); ?></div>
+	<div class="alert alert-info text-center"><?php dynamic_sidebar( 'fraizers_home_event_calendar' ); ?></div> 
 </div>
 <div id="mainBody">
 	<div class="container">

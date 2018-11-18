@@ -179,6 +179,9 @@ text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 border-bottom: 1px solid #bbbbbb;
 background: #f7f7f7
 }
+.eme_period {
+display: none;
+}
 .eme-calendar-table tbody td {
 color: #666;
 padding: 8px;

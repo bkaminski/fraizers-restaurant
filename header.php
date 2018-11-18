@@ -31,10 +31,6 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
-		<!--[if lt IE 9]>
-      		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    	<![endif]-->
     	<?php wp_head(); ?>
   	</head>
 	<body <?php body_class(); ?>>

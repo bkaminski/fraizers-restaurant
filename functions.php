@@ -1,20 +1,10 @@
 <?php
-// ASYNC LOAD JS FILES
-function wss_async_scripts($url)
-{
-    if ( strpos( $url, '#asyncload') === false )
-        return $url;
-    else if ( is_admin() )
-        return str_replace( '#asyncload', '', $url );
-    else
-	return str_replace( '#asyncload', '', $url )."' async='async"; 
-    }
-add_filter( 'clean_url', 'wss_async_scripts', 11, 1 );
+
 //Load dependencies in header or footer
 function enqueue_fraizers_scripts() {
-	wp_enqueue_script( 'bootstrap-js-cdn', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js#asyncload', array('jquery'), null, true);
+	wp_enqueue_script( 'bootstrap-js-cdn', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'), null, true);
 	wp_enqueue_script( 'fraizers-js' , get_template_directory_uri() . '/js/fraizers.js', array('jquery'), null, true);
-	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/27505604f5.js#asyncload', false, null, true);
+	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/27505604f5.js', false, null, true);
 }
 	add_action('wp_enqueue_scripts', 'enqueue_fraizers_scripts');
 
@@ -154,49 +144,49 @@ function _custom_menu_page(){
    	<h1>Fraizer's Website Training Videos</h1><br />
    	<p>If you would like to request a tutorial video, <a href='mailto:ben@benkaminski.com'>contact Ben here</a></p>
    	<h3>Video 1: Intro to WordPress Dashboard</h3>
-   	<video id='IntroToDashboard' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/video-cover.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/intro-to-wp-dashboard.mp4' controls='controls' preload='none'></video>
+   	<video id='IntroToDashboard' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/video-cover.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/intro-to-wp-dashboard.mp4' controls='controls' preload='none'></video>
    	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 2: Using / Updating the Image Slider on Home Page</h3>
-	<video id='updateSlideShow' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/edit-image-slideshow.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/update-slideshow-fraizers.mp4' controls='controls' preload='none'></video>
+	<video id='updateSlideShow' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/edit-image-slideshow.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/update-slideshow-fraizers.mp4' controls='controls' preload='none'></video>
    	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 3: Cropping Images For Slideshow and Other Areas (Updated: 5/29/16)</h3>
-	<video id='cropSlideShow' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/resize-image-fraizers.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/image-resizer-take-two.mp4' controls='controls' preload='none'></video>
+	<video id='cropSlideShow' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/resize-image-fraizers.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/image-resizer-take-two.mp4' controls='controls' preload='none'></video>
    	<br />
-   	<p style='font-size:18px;'>Visit <a target='_blank' href='http://resizeimage.net'>Resize Image Website</a></p>
+   	<p style='font-size:18px;'>Visit <a target='_blank' href='https://resizeimage.net'>Resize Image Website</a></p>
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 4: Using the Compressor.io to Compress Images</h3>
-   	<video id='updateCompress' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/using-compressor-io.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/using_compressor_io.mp4' controls='controls' preload='none'></video>
+   	<video id='updateCompress' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/using-compressor-io.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/using_compressor_io.mp4' controls='controls' preload='none'></video>
 	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 5: Adding Single and Recurring Events</h3>
-   	<video id='updateEvents' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/events-manager.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers_add_events.mp4' controls='controls' preload='none'></video>
+   	<video id='updateEvents' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/events-manager.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers_add_events.mp4' controls='controls' preload='none'></video>
 	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 6: Updating Welcome Text Area on Home Page</h3>
-   	<video id='updateWelcome' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/welcome-to-fraizers.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/edit_home_welcome_text.mp4' controls='controls' preload='none'></video>
+   	<video id='updateWelcome' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/welcome-to-fraizers.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/edit_home_welcome_text.mp4' controls='controls' preload='none'></video>
 	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 7: Updating <u>Our Menu</u> Section and Corresponding Image on Home Page</h3>
-   	<video id='updateOurMenu' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/our-menu-section.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/update_our_menu_section.mp4' controls='controls' preload='none'></video>
+   	<video id='updateOurMenu' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/our-menu-section.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/update_our_menu_section.mp4' controls='controls' preload='none'></video>
 	<br />
 	<p style='font-size:18px;'>This same technique can be applied to the bottom portion of the home page with the same image and corresponding text area</p>
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 8: Editing Pages Within The Website</h3>
-   	<video id='updatePages' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/fraizers-edit-pages.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers-edit-pages.mp4' controls='controls' preload='none'></video>
+   	<video id='updatePages' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/fraizers-edit-pages.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers-edit-pages.mp4' controls='controls' preload='none'></video>
 	<br />
    	<br />
    	<hr style='border-top:3px solid'>
    	<h3>Video 9: Cropping and Resizing Images on Windows 10</h3>
-   	<video id='updatePages' poster='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/crop-resize-win10.png' width='640' height='360' src='http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers-cropping-square-images.mp4' controls='controls' preload='none'></video>
+   	<video id='updatePages' poster='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/crop-resize-win10.png' width='640' height='360' src='https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/vids/fraizers-cropping-square-images.mp4' controls='controls' preload='none'></video>
 	<br />
    	<br />
    	<hr style='border-top:3px solid'>
@@ -284,8 +274,8 @@ add_action( 'login_enqueue_scripts', 'fraizers_restaurant_enqueue_script', 1 );
 
 //ADMIN SECTION FAVICON ITEMS TO <head> SECTION
 function fraizersFavicon() {
- echo '<link rel="Icon" type="image/x-icon" href="http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/favicon-32x32.png" />
- <link rel="Shortcut Icon" type="image/x-icon" href="http://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/favicon-32x32.png" />';
+ echo '<link rel="Icon" type="image/x-icon" href="https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/favicon-32x32.png" />
+ <link rel="Shortcut Icon" type="image/x-icon" href="https://fraizersrestaurant.com/wp-content/themes/fraizers_restaurant/img/favicon-32x32.png" />';
  }
  add_action( 'login_head', 'fraizersFavicon' );
  add_action( 'admin_head', 'fraizersFavicon' );
